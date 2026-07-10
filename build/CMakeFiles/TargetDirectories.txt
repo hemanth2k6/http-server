@@ -1,6 +1,3 @@
-/home/hemanth/my-projects/http server/build/CMakeFiles/httpserver.dir
-/home/hemanth/my-projects/http server/build/CMakeFiles/test_parser.dir
-/home/hemanth/my-projects/http server/build/CMakeFiles/test_server.dir
-/home/hemanth/my-projects/http server/build/CMakeFiles/test.dir
+/home/hemanth/my-projects/http server/build/CMakeFiles/proxy.dir
 /home/hemanth/my-projects/http server/build/CMakeFiles/edit_cache.dir
 /home/hemanth/my-projects/http server/build/CMakeFiles/rebuild_cache.dir

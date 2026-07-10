@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -Wall -Wextra -O2 CMakeFiles/test_parser.dir/tests/test_parser.cpp.o CMakeFiles/test_parser.dir/src/server/request_parser.cpp.o CMakeFiles/test_parser.dir/src/server/response_builder.cpp.o CMakeFiles/test_parser.dir/src/server/thread_pool.cpp.o -o test_parser 

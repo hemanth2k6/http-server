@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MultiThreadedHTTPServer
+CMAKE_PROJECT_NAME:STATIC=RainbowProxy
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,13 +216,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-MultiThreadedHTTPServer_BINARY_DIR:STATIC=/home/hemanth/my-projects/http server/build
+RainbowProxy_BINARY_DIR:STATIC=/home/hemanth/my-projects/http server/build
 
 //Value Computed by CMake
-MultiThreadedHTTPServer_IS_TOP_LEVEL:STATIC=ON
+RainbowProxy_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-MultiThreadedHTTPServer_SOURCE_DIR:STATIC=/home/hemanth/my-projects/http server
+RainbowProxy_SOURCE_DIR:STATIC=/home/hemanth/my-projects/http server
 
 
 ########################
@@ -307,8 +307,6 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/hemanth/my-projects/http server
@@ -376,8 +374,6 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

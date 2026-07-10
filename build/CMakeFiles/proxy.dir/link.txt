@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O2 -pthread CMakeFiles/proxy.dir/src/main.cpp.o CMakeFiles/proxy.dir/src/Connection.cpp.o CMakeFiles/proxy.dir/src/EventLoop.cpp.o CMakeFiles/proxy.dir/src/HttpParser.cpp.o CMakeFiles/proxy.dir/src/LoadBalancer.cpp.o CMakeFiles/proxy.dir/src/RateLimiter.cpp.o CMakeFiles/proxy.dir/src/UpstreamPool.cpp.o -o proxy  -lpthread 

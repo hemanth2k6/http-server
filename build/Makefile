@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = "/home/hemanth/my-projects/http server/build"
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -127,50 +117,168 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named httpserver
+# Target rules for targets named proxy
 
 # Build rule for target.
-httpserver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 httpserver
-.PHONY : httpserver
+proxy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 proxy
+.PHONY : proxy
 
 # fast build rule for target.
-httpserver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/build
-.PHONY : httpserver/fast
+proxy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/build
+.PHONY : proxy/fast
 
-#=============================================================================
-# Target rules for targets named test_parser
+src/Connection.o: src/Connection.cpp.o
+.PHONY : src/Connection.o
 
-# Build rule for target.
-test_parser: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_parser
-.PHONY : test_parser
+# target to build an object file
+src/Connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/Connection.cpp.o
+.PHONY : src/Connection.cpp.o
 
-# fast build rule for target.
-test_parser/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/build
-.PHONY : test_parser/fast
+src/Connection.i: src/Connection.cpp.i
+.PHONY : src/Connection.i
 
-#=============================================================================
-# Target rules for targets named test_server
+# target to preprocess a source file
+src/Connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/Connection.cpp.i
+.PHONY : src/Connection.cpp.i
 
-# Build rule for target.
-test_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server
-.PHONY : test_server
+src/Connection.s: src/Connection.cpp.s
+.PHONY : src/Connection.s
 
-# fast build rule for target.
-test_server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/build
-.PHONY : test_server/fast
+# target to generate assembly for a file
+src/Connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/Connection.cpp.s
+.PHONY : src/Connection.cpp.s
+
+src/EventLoop.o: src/EventLoop.cpp.o
+.PHONY : src/EventLoop.o
+
+# target to build an object file
+src/EventLoop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/EventLoop.cpp.o
+.PHONY : src/EventLoop.cpp.o
+
+src/EventLoop.i: src/EventLoop.cpp.i
+.PHONY : src/EventLoop.i
+
+# target to preprocess a source file
+src/EventLoop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/EventLoop.cpp.i
+.PHONY : src/EventLoop.cpp.i
+
+src/EventLoop.s: src/EventLoop.cpp.s
+.PHONY : src/EventLoop.s
+
+# target to generate assembly for a file
+src/EventLoop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/EventLoop.cpp.s
+.PHONY : src/EventLoop.cpp.s
+
+src/HttpParser.o: src/HttpParser.cpp.o
+.PHONY : src/HttpParser.o
+
+# target to build an object file
+src/HttpParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/HttpParser.cpp.o
+.PHONY : src/HttpParser.cpp.o
+
+src/HttpParser.i: src/HttpParser.cpp.i
+.PHONY : src/HttpParser.i
+
+# target to preprocess a source file
+src/HttpParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/HttpParser.cpp.i
+.PHONY : src/HttpParser.cpp.i
+
+src/HttpParser.s: src/HttpParser.cpp.s
+.PHONY : src/HttpParser.s
+
+# target to generate assembly for a file
+src/HttpParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/HttpParser.cpp.s
+.PHONY : src/HttpParser.cpp.s
+
+src/LoadBalancer.o: src/LoadBalancer.cpp.o
+.PHONY : src/LoadBalancer.o
+
+# target to build an object file
+src/LoadBalancer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/LoadBalancer.cpp.o
+.PHONY : src/LoadBalancer.cpp.o
+
+src/LoadBalancer.i: src/LoadBalancer.cpp.i
+.PHONY : src/LoadBalancer.i
+
+# target to preprocess a source file
+src/LoadBalancer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/LoadBalancer.cpp.i
+.PHONY : src/LoadBalancer.cpp.i
+
+src/LoadBalancer.s: src/LoadBalancer.cpp.s
+.PHONY : src/LoadBalancer.s
+
+# target to generate assembly for a file
+src/LoadBalancer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/LoadBalancer.cpp.s
+.PHONY : src/LoadBalancer.cpp.s
+
+src/RateLimiter.o: src/RateLimiter.cpp.o
+.PHONY : src/RateLimiter.o
+
+# target to build an object file
+src/RateLimiter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/RateLimiter.cpp.o
+.PHONY : src/RateLimiter.cpp.o
+
+src/RateLimiter.i: src/RateLimiter.cpp.i
+.PHONY : src/RateLimiter.i
+
+# target to preprocess a source file
+src/RateLimiter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/RateLimiter.cpp.i
+.PHONY : src/RateLimiter.cpp.i
+
+src/RateLimiter.s: src/RateLimiter.cpp.s
+.PHONY : src/RateLimiter.s
+
+# target to generate assembly for a file
+src/RateLimiter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/RateLimiter.cpp.s
+.PHONY : src/RateLimiter.cpp.s
+
+src/UpstreamPool.o: src/UpstreamPool.cpp.o
+.PHONY : src/UpstreamPool.o
+
+# target to build an object file
+src/UpstreamPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/UpstreamPool.cpp.o
+.PHONY : src/UpstreamPool.cpp.o
+
+src/UpstreamPool.i: src/UpstreamPool.cpp.i
+.PHONY : src/UpstreamPool.i
+
+# target to preprocess a source file
+src/UpstreamPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/UpstreamPool.cpp.i
+.PHONY : src/UpstreamPool.cpp.i
+
+src/UpstreamPool.s: src/UpstreamPool.cpp.s
+.PHONY : src/UpstreamPool.s
+
+# target to generate assembly for a file
+src/UpstreamPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/UpstreamPool.cpp.s
+.PHONY : src/UpstreamPool.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -178,7 +286,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -186,227 +294,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proxy.dir/build.make CMakeFiles/proxy.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/server/file_handler.o: src/server/file_handler.cpp.o
-.PHONY : src/server/file_handler.o
-
-# target to build an object file
-src/server/file_handler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/file_handler.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/file_handler.cpp.o
-.PHONY : src/server/file_handler.cpp.o
-
-src/server/file_handler.i: src/server/file_handler.cpp.i
-.PHONY : src/server/file_handler.i
-
-# target to preprocess a source file
-src/server/file_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/file_handler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/file_handler.cpp.i
-.PHONY : src/server/file_handler.cpp.i
-
-src/server/file_handler.s: src/server/file_handler.cpp.s
-.PHONY : src/server/file_handler.s
-
-# target to generate assembly for a file
-src/server/file_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/file_handler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/file_handler.cpp.s
-.PHONY : src/server/file_handler.cpp.s
-
-src/server/http_server.o: src/server/http_server.cpp.o
-.PHONY : src/server/http_server.o
-
-# target to build an object file
-src/server/http_server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/http_server.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/http_server.cpp.o
-.PHONY : src/server/http_server.cpp.o
-
-src/server/http_server.i: src/server/http_server.cpp.i
-.PHONY : src/server/http_server.i
-
-# target to preprocess a source file
-src/server/http_server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/http_server.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/http_server.cpp.i
-.PHONY : src/server/http_server.cpp.i
-
-src/server/http_server.s: src/server/http_server.cpp.s
-.PHONY : src/server/http_server.s
-
-# target to generate assembly for a file
-src/server/http_server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/http_server.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/http_server.cpp.s
-.PHONY : src/server/http_server.cpp.s
-
-src/server/request_parser.o: src/server/request_parser.cpp.o
-.PHONY : src/server/request_parser.o
-
-# target to build an object file
-src/server/request_parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/request_parser.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/request_parser.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/request_parser.cpp.o
-.PHONY : src/server/request_parser.cpp.o
-
-src/server/request_parser.i: src/server/request_parser.cpp.i
-.PHONY : src/server/request_parser.i
-
-# target to preprocess a source file
-src/server/request_parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/request_parser.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/request_parser.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/request_parser.cpp.i
-.PHONY : src/server/request_parser.cpp.i
-
-src/server/request_parser.s: src/server/request_parser.cpp.s
-.PHONY : src/server/request_parser.s
-
-# target to generate assembly for a file
-src/server/request_parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/request_parser.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/request_parser.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/request_parser.cpp.s
-.PHONY : src/server/request_parser.cpp.s
-
-src/server/response_builder.o: src/server/response_builder.cpp.o
-.PHONY : src/server/response_builder.o
-
-# target to build an object file
-src/server/response_builder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/response_builder.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/response_builder.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/response_builder.cpp.o
-.PHONY : src/server/response_builder.cpp.o
-
-src/server/response_builder.i: src/server/response_builder.cpp.i
-.PHONY : src/server/response_builder.i
-
-# target to preprocess a source file
-src/server/response_builder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/response_builder.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/response_builder.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/response_builder.cpp.i
-.PHONY : src/server/response_builder.cpp.i
-
-src/server/response_builder.s: src/server/response_builder.cpp.s
-.PHONY : src/server/response_builder.s
-
-# target to generate assembly for a file
-src/server/response_builder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/response_builder.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/response_builder.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/response_builder.cpp.s
-.PHONY : src/server/response_builder.cpp.s
-
-src/server/thread_pool.o: src/server/thread_pool.cpp.o
-.PHONY : src/server/thread_pool.o
-
-# target to build an object file
-src/server/thread_pool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/thread_pool.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/thread_pool.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/thread_pool.cpp.o
-.PHONY : src/server/thread_pool.cpp.o
-
-src/server/thread_pool.i: src/server/thread_pool.cpp.i
-.PHONY : src/server/thread_pool.i
-
-# target to preprocess a source file
-src/server/thread_pool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/thread_pool.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/thread_pool.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/thread_pool.cpp.i
-.PHONY : src/server/thread_pool.cpp.i
-
-src/server/thread_pool.s: src/server/thread_pool.cpp.s
-.PHONY : src/server/thread_pool.s
-
-# target to generate assembly for a file
-src/server/thread_pool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/server/thread_pool.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/src/server/thread_pool.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/server/thread_pool.cpp.s
-.PHONY : src/server/thread_pool.cpp.s
-
-src/utils/socket_utils.o: src/utils/socket_utils.cpp.o
-.PHONY : src/utils/socket_utils.o
-
-# target to build an object file
-src/utils/socket_utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/utils/socket_utils.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/utils/socket_utils.cpp.o
-.PHONY : src/utils/socket_utils.cpp.o
-
-src/utils/socket_utils.i: src/utils/socket_utils.cpp.i
-.PHONY : src/utils/socket_utils.i
-
-# target to preprocess a source file
-src/utils/socket_utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/utils/socket_utils.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/utils/socket_utils.cpp.i
-.PHONY : src/utils/socket_utils.cpp.i
-
-src/utils/socket_utils.s: src/utils/socket_utils.cpp.s
-.PHONY : src/utils/socket_utils.s
-
-# target to generate assembly for a file
-src/utils/socket_utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/src/utils/socket_utils.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/utils/socket_utils.cpp.s
-.PHONY : src/utils/socket_utils.cpp.s
-
-tests/test_parser.o: tests/test_parser.cpp.o
-.PHONY : tests/test_parser.o
-
-# target to build an object file
-tests/test_parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.o
-.PHONY : tests/test_parser.cpp.o
-
-tests/test_parser.i: tests/test_parser.cpp.i
-.PHONY : tests/test_parser.i
-
-# target to preprocess a source file
-tests/test_parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.i
-.PHONY : tests/test_parser.cpp.i
-
-tests/test_parser.s: tests/test_parser.cpp.s
-.PHONY : tests/test_parser.s
-
-# target to generate assembly for a file
-tests/test_parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.s
-.PHONY : tests/test_parser.cpp.s
-
-tests/test_server.o: tests/test_server.cpp.o
-.PHONY : tests/test_server.o
-
-# target to build an object file
-tests/test_server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/tests/test_server.cpp.o
-.PHONY : tests/test_server.cpp.o
-
-tests/test_server.i: tests/test_server.cpp.i
-.PHONY : tests/test_server.i
-
-# target to preprocess a source file
-tests/test_server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/tests/test_server.cpp.i
-.PHONY : tests/test_server.cpp.i
-
-tests/test_server.s: tests/test_server.cpp.s
-.PHONY : tests/test_server.s
-
-# target to generate assembly for a file
-tests/test_server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/tests/test_server.cpp.s
-.PHONY : tests/test_server.cpp.s
 
 # Help Target
 help:
@@ -416,37 +305,28 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... httpserver"
-	@echo "... test_parser"
-	@echo "... test_server"
+	@echo "... proxy"
+	@echo "... src/Connection.o"
+	@echo "... src/Connection.i"
+	@echo "... src/Connection.s"
+	@echo "... src/EventLoop.o"
+	@echo "... src/EventLoop.i"
+	@echo "... src/EventLoop.s"
+	@echo "... src/HttpParser.o"
+	@echo "... src/HttpParser.i"
+	@echo "... src/HttpParser.s"
+	@echo "... src/LoadBalancer.o"
+	@echo "... src/LoadBalancer.i"
+	@echo "... src/LoadBalancer.s"
+	@echo "... src/RateLimiter.o"
+	@echo "... src/RateLimiter.i"
+	@echo "... src/RateLimiter.s"
+	@echo "... src/UpstreamPool.o"
+	@echo "... src/UpstreamPool.i"
+	@echo "... src/UpstreamPool.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/server/file_handler.o"
-	@echo "... src/server/file_handler.i"
-	@echo "... src/server/file_handler.s"
-	@echo "... src/server/http_server.o"
-	@echo "... src/server/http_server.i"
-	@echo "... src/server/http_server.s"
-	@echo "... src/server/request_parser.o"
-	@echo "... src/server/request_parser.i"
-	@echo "... src/server/request_parser.s"
-	@echo "... src/server/response_builder.o"
-	@echo "... src/server/response_builder.i"
-	@echo "... src/server/response_builder.s"
-	@echo "... src/server/thread_pool.o"
-	@echo "... src/server/thread_pool.i"
-	@echo "... src/server/thread_pool.s"
-	@echo "... src/utils/socket_utils.o"
-	@echo "... src/utils/socket_utils.i"
-	@echo "... src/utils/socket_utils.s"
-	@echo "... tests/test_parser.o"
-	@echo "... tests/test_parser.i"
-	@echo "... tests/test_parser.s"
-	@echo "... tests/test_server.o"
-	@echo "... tests/test_server.i"
-	@echo "... tests/test_server.s"
 .PHONY : help
 
 
