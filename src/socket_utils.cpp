@@ -4,6 +4,7 @@
 #include <netinet/in.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <sys/time.h>
 #include <cstring>
 #include <stdexcept>
 
