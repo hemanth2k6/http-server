@@ -47,6 +47,6 @@ public:
     std::optional<BackendInfo> get_backend();
 
 private:
-    std::vector<BackendInfo> backends_;
+    const std::vector<BackendInfo> &backends_;
     size_t next_;
 };
