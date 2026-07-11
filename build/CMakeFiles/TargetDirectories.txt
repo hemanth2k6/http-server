@@ -1,3 +1,0 @@
-/home/hemanth/my-projects/http server/build/CMakeFiles/proxy.dir
-/home/hemanth/my-projects/http server/build/CMakeFiles/edit_cache.dir
-/home/hemanth/my-projects/http server/build/CMakeFiles/rebuild_cache.dir
